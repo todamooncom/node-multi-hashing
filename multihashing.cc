@@ -9,6 +9,7 @@ extern "C" {
     #include "c11.h"
     #include "cryptonight.h"
     #include "cryptonight_fast.h"
+    #include "decred.h"
     #include "fresh.h"
     #include "fugue.h"
     #include "groestl.h"
@@ -105,6 +106,7 @@ using namespace v8;
 
  DECLARE_CALLBACK(bcrypt, bcrypt_hash, 32);
  DECLARE_CALLBACK(blake, blake_hash, 32);
+ DECLARE_CALLBACK(decred, decred_hash, 32);
  DECLARE_CALLBACK(c11, c11_hash, 32);
  DECLARE_CALLBACK(fresh, fresh_hash, 32);
  DECLARE_CALLBACK(fugue, fugue_hash, 32);
@@ -339,6 +341,7 @@ DECLARE_INIT(init) {
     NODE_SET_METHOD(exports, "c11", c11);
     NODE_SET_METHOD(exports, "cryptonight", cryptonight);
 	NODE_SET_METHOD(exports, "cryptonightfast", cryptonightfast);
+    NODE_SET_METHOD(exports, "decred", decred);
     NODE_SET_METHOD(exports, "fresh", fresh);
     NODE_SET_METHOD(exports, "fugue", fugue);
     NODE_SET_METHOD(exports, "groestl", groestl);

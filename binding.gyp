@@ -10,6 +10,7 @@
                 "c11.c",
                 "cryptonight.c",
 				"cryptonight_fast.c",
+                "decred.c",
                 "fresh.c",
                 "fugue.c",
                 "groestl.c",
